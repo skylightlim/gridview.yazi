@@ -13,7 +13,9 @@ swayimg.overlay = true
 swayimg.gallery.pstore = true
 swayimg.gallery.aspect = "fit"
 swayimg.gallery.thumb_size = 220
-swayimg.gallery.text = { bottomleft = { "{name}" }, topright = { "{list.index}/{list.total}" } }
+-- Replaces the gallery's default corners ("File:\t{name}", "{list.index} of {list.total}").
+-- Only the corners named here change; the rest keep swayimg's defaults.
+swayimg.gallery.text = { topleft = { "{name}" }, topright = { "{list.index}/{list.total}" } }
 
 local function reveal()
   local img = swayimg.gallery.get_image()

@@ -7,6 +7,8 @@ Press `g v` and every image in the folder appears as a grid, floating over the
 yazi window and starting on the image you were hovering. Pick one and yazi jumps
 to it.
 
+![A grid of photo thumbnails, with the selected one enlarged and outlined](assets/screenshot.jpg)
+
 This is the yazi docs' [Grid view with Rofi](https://yazi-rs.github.io/docs/tips/#grid-view)
 tip without rofi. swayimg is a small Wayland image viewer with a gallery mode,
 scripted in Lua.
@@ -55,9 +57,9 @@ Your own `~/.config/swayimg/init.lua` applies to the grid. It loads first, so it
 colours, fonts and anything else carry over.
 
 gridview then sets a few things itself: the overlay window, whole-image
-thumbnails at 220px, file names under the grid, and the keys above. To change
-those, pass extra swayimg Lua in `~/.config/yazi/init.lua`. It runs last, so it
-wins:
+thumbnails at 220px, the file name and position along the top, and the keys
+above. To change those, pass extra swayimg Lua in `~/.config/yazi/init.lua`. It
+runs last, so it wins:
 
 ```lua
 require("gridview"):setup({
